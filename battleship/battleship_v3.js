@@ -15,6 +15,7 @@ while (!isSunk) {
     if (guess == null) {
         alert("Game Over.");
     }
+
     guess = parselnt(guess, 10);
 
     if (isNaN(guess) || guess < 0 || guess > 6) {
@@ -24,11 +25,11 @@ while (!isSunk) {
     }
 
     guesses ++;
+
     const hitIndex = shipLocations.indexOf(guess);
 
     if (hitIndex !== -1) {
         alert("Hit!");
-
         shipLocations.splice(hitIndex, 1);
         hits ++;
         if (shipLocations.lenght === o) {
